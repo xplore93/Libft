@@ -6,13 +6,15 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:58:42 by estina            #+#    #+#             */
-/*   Updated: 2019/11/04 16:04:09 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/04 20:37:22 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

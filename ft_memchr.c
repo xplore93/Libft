@@ -6,13 +6,15 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:38:09 by estina            #+#    #+#             */
-/*   Updated: 2019/11/04 14:44:06 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/04 20:51:20 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

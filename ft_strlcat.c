@@ -6,15 +6,17 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 19:30:32 by estina            #+#    #+#             */
-/*   Updated: 2019/11/04 19:49:15 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/04 20:51:57 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlcat(char *dst, const char *src, int dstsize)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
-	int	j;
-	int	res;
+	size_t	i;
+	size_t	j;
+	size_t	res;
 
 	i = 0;
 	while (dst[i] != '\0')

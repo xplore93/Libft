@@ -6,11 +6,13 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 19:18:04 by estina            #+#    #+#             */
-/*   Updated: 2019/11/04 19:29:19 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/04 20:36:14 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlcpy(char *dst, const char *src, int dstsize)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	char *aux;
 	char *s;
