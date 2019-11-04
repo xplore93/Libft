@@ -6,7 +6,7 @@
 #    By: estina <estina@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/23 13:13:02 by estina            #+#    #+#              #
-#    Updated: 2019/11/04 22:31:54 by estina           ###   ########.fr        #
+#    Updated: 2019/11/04 23:44:48 by estina           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS	=	ft_memset.c		ft_toupper.c	\
 			ft_memcmp.c		ft_strlcat.c	\
 			ft_strlen.c		ft_strnstr.c	\
 			ft_isalpha.c	ft_atoi.c		\
-			ft_isdigit.c		\
+			ft_isdigit.c	ft_calloc.c		\
 			ft_isalnum.c		\
 			ft_isascii.c		\
 			ft_isprint.c
