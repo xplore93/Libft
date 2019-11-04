@@ -6,20 +6,18 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:12:27 by estina            #+#    #+#             */
-/*   Updated: 2019/11/04 12:12:35 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/04 12:33:58 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memset(void *b, int c, int len)
 {
-	unsigned char	aux;
-	int				i;
+	int		i;
 
 	i = 0;
-	aux = (char)c;
 	while (i < len)
 	{
-		((char*)b)[i] = aux;
+		((char*)b)[i] = c;
 		i++;
 	}
 	return (b);
