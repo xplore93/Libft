@@ -6,12 +6,11 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 14:55:42 by estina            #+#    #+#             */
-/*   Updated: 2019/11/05 16:35:19 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/05 16:37:02 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*ft_malloc_number(int n, int *num_digits)
 {
