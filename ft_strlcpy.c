@@ -6,7 +6,7 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 19:18:04 by estina            #+#    #+#             */
-/*   Updated: 2019/11/06 19:07:17 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/06 20:04:23 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		*dst = 0;
 	else if (dstsize > 0)
 		dst[-1] = 0;
-	while (*s != '\0')
+	while (*s)
 		s++;
 	return (s - src);
 }
