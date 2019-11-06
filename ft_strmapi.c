@@ -6,7 +6,7 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:36:38 by estina            #+#    #+#             */
-/*   Updated: 2019/11/05 16:49:54 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/06 16:09:49 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		i = 0;
 		str = malloc(ft_strlen(s) * sizeof(str));
-		while (s[i] != 0)
+		while (s[i])
 		{
 			str[i] = f(i, s[i]);
 			i++;
 		}
+		str[i] = 0;
 		return (str);
 	}
 	return (NULL);
