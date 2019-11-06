@@ -6,7 +6,7 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 19:18:04 by estina            #+#    #+#             */
-/*   Updated: 2019/11/04 20:36:14 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/06 19:07:17 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	aux = dst + dstsize;
 	s = (char*)src;
-	while (*s != '\0' && dst < aux)
+	while (*s && dst < aux)
 		*dst++ = *s++;
 	if (dst < aux)
 		*dst = 0;
