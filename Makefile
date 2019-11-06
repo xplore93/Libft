@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME	=	libft.a
-ddddddd
+
 SRCS	=	ft_memset.c		ft_toupper.c	ft_strtrim.c	\
 			ft_bzero.c		ft_tolower.c	ft_split.c		\
 			ft_memcpy.c		ft_strchr.c		ft_itoa.c		\
