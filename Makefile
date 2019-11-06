@@ -6,12 +6,12 @@
 #    By: estina <estina@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/23 13:13:02 by estina            #+#    #+#              #
-#    Updated: 2019/11/06 18:58:20 by estina           ###   ########.fr        #
+#    Updated: 2019/11/06 20:28:35 by estina           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
-
+ddddddd
 SRCS	=	ft_memset.c		ft_toupper.c	ft_strtrim.c	\
 			ft_bzero.c		ft_tolower.c	ft_split.c		\
 			ft_memcpy.c		ft_strchr.c		ft_itoa.c		\
