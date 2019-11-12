@@ -6,15 +6,15 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 22:32:01 by estina            #+#    #+#             */
-/*   Updated: 2019/11/04 23:23:52 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/09 18:20:53 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int number;
-	int sign;
+	int					i;
+	unsigned long long	number;
+	int					sign;
 
 	i = 0;
 	number = 0;
@@ -31,6 +31,8 @@ int		ft_atoi(const char *str)
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (number > __LONG_LONG_MAX__ || i >= 19)
+			return (sign == -1 ? 0 : -1);
 		number = number * 10 + (str[i] - '0');
 		i++;
 	}

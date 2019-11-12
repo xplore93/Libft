@@ -6,11 +6,20 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 14:55:42 by estina            #+#    #+#             */
-/*   Updated: 2019/11/05 16:37:02 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/09 18:50:58 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	ft_sum_digits(long int *num, int *num_digits)
+{
+	while (*num >= 10)
+	{
+		(*num_digits)++;
+		*num /= 10;
+	}
+}
 
 static char	*ft_malloc_number(int n, int *num_digits)
 {
@@ -19,7 +28,8 @@ static char	*ft_malloc_number(int n, int *num_digits)
 
 	if (n == 0)
 	{
-		number = malloc(2);
+		if (!(number = malloc(2)))
+			return (NULL);
 		number[0] = '0';
 		number[1] = 0;
 		return (number);
@@ -31,12 +41,9 @@ static char	*ft_malloc_number(int n, int *num_digits)
 		num *= -1;
 		(*num_digits)++;
 	}
-	while (num >= 10)
-	{
-		(*num_digits)++;
-		num /= 10;
-	}
-	number = malloc(*num_digits + 1);
+	ft_sum_digits(&num, num_digits);
+	if (!(number = malloc(*num_digits + 1)))
+		return (NULL);
 	number[*num_digits] = 0;
 	return (number);
 }
@@ -48,7 +55,8 @@ char		*ft_itoa(int n)
 	long int	num;
 
 	number = NULL;
-	number = ft_malloc_number(n, &num_digits);
+	if (!(number = ft_malloc_number(n, &num_digits)))
+		return (NULL);
 	num = n;
 	if (num < 0)
 	{

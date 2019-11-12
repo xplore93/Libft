@@ -6,7 +6,7 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:54:04 by estina            #+#    #+#             */
-/*   Updated: 2019/11/05 16:54:51 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/09 19:39:31 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int		i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 		ft_putchar_fd(s[i++], fd);

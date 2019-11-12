@@ -6,7 +6,7 @@
 /*   By: estina <estina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 23:40:04 by estina            #+#    #+#             */
-/*   Updated: 2019/11/06 15:01:45 by estina           ###   ########.fr       */
+/*   Updated: 2019/11/09 18:31:43 by estina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
-	size_t	i;
+	size_t	mem;
 
-	if (!count || !size)
+	if (size == 0)
+		mem = count;
+	else
+		mem = count * size;
+	if (!(p = malloc(mem)))
 		return (NULL);
-	p = malloc(count * size);
-	i = 0;
-	while (i < count)
-	{
-		((char*)p)[i] = 0;
-		i++;
-	}
-	return (p);
+	return (ft_memset(p, 0, mem));
 }

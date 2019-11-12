@@ -6,7 +6,7 @@
 #    By: estina <estina@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/23 13:13:02 by estina            #+#    #+#              #
-#    Updated: 2019/11/06 20:28:35 by estina           ###   ########.fr        #
+#    Updated: 2019/11/10 14:28:03 by estina           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,14 +24,19 @@ SRCS	=	ft_memset.c		ft_toupper.c	ft_strtrim.c	\
 			ft_isdigit.c	ft_calloc.c						\
 			ft_isalnum.c	ft_strdup.c						\
 			ft_isascii.c	ft_substr.c						\
-			ft_isprint.c	ft_strjoin.c					\
-			ft_lstnew.c		ft_lstadd.c		ft_lstsize.c	\
-			ft_lstlast.c	ft_lstadd_back.c	ft_lstdelone.c	\
-			ft_lstclear.c	ft_lstiter.c	ft_lstmap.c
+			ft_isprint.c	ft_strjoin.c
+
+BONS	=	ft_lstnew_bonus.c		ft_lstadd_front_bonus.c	\
+			ft_lstsize_bonus.c		ft_lstlast_bonus.c		\
+			ft_lstadd_back_bonus.c	ft_lstdelone_bonus.c	\
+			ft_lstclear_bonus.c		ft_lstiter_bonus.c		\
+			ft_lstmap_bonus.c
 
 GCC		=	@gcc -Wall -Wextra -Werror
 
 OBJECTS	=	$(SRCS:.c=.o)
+
+BOBJ	=	$(BONS:.c=.o)
 
 all: $(NAME)
 
@@ -40,8 +45,13 @@ $(NAME): $(SRCS) libft.h
 	-@ar rc $(NAME) $(OBJECTS)
 	-@ranlib $(NAME)
 
+bonus: $(BONS) $(SRCS) libft.h
+	-$(GCC) -I./ -c $(BONS) $(SRCS)
+	-@ar rc $(NAME) $(BOBJ) $(OBJECTS)
+	-@ranlib $(NAME)
+
 clean:
-	-@rm -f $(OBJECTS)
+	-@rm -f $(OBJECTS) $(BOBJ)
 
 fclean: clean
 	-@rm -f $(NAME)
