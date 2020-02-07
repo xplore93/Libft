@@ -12,15 +12,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s >= 0)
+	int i;
+
+	i = 0;
+	c = (unsigned char)c;
+	while (s[i])
 	{
-		if (*s == c)
-			return ((char*)s);
-		if (!*s && *s == c)
-			return ((char*)s);
-		if (!*s)
-			break ;
-		s++;
+		if (s[i] == c)
+			return ((char *)s + i);
+		i++;
 	}
+	if (!c)
+		return ((char *)s + i);
 	return (0);
 }
